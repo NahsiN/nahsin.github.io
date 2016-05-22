@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Google Now vs Siri
-subtitle: Siri sucks!
+subtitle: I miss my Nexus.
 ---
 
 So when it comes to artificial intelligence, who is smarter,
