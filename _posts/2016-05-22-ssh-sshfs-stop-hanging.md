@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: post
 title: Stop ssh/sshfs from hanging up your applications
 ---
 

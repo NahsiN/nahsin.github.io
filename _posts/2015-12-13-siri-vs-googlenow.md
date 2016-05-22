@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: post
 title: Google Now vs Siri
 subtitle: I miss my Nexus.
 ---
