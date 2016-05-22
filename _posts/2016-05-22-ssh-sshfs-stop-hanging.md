@@ -17,8 +17,7 @@ is really annoying.
 
 To resolve this issue for ssh, we use the option ServerAliveInterval. Quoting
 from the man page of ssh_config,
-> ServerAliveInterval
-
+> ServerAliveInterval  
 > Sets a timeout interval in seconds after which if no data has
 been received from the server, ssh(1) will send a message through
 the encrypted channel to request a response from the server. The
@@ -28,13 +27,16 @@ ProtocolKeepAlives and SetupTimeOut are Debian-specific compati-
 bility aliases for this option.
 
 Therefore, either modify your ssh_config file or use the following command
+
 ```
 ssh -o ServerAliveInterval=300 user@machine-name
 ```
+
 So far, 300 = 5 minutes has served me well. Experiment with the value to find
 one that works for you.
 
 For sshfs, use the following command
+
 ```
 sshfs user@machine-name -o ServerAliveInterval=300 mount-path
 ```
