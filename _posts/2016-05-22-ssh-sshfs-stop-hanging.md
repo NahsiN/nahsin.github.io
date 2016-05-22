@@ -28,15 +28,15 @@ bility aliases for this option.
 
 Therefore, either modify your ssh_config file or use the following command
 
-```
+~~~
 ssh -o ServerAliveInterval=300 user@machine-name
-```
+~~~
 
 So far, 300 = 5 minutes has served me well. Experiment with the value to find
 one that works for you.
 
 For sshfs, use the following command
 
-```
+~~~
 sshfs user@machine-name -o ServerAliveInterval=300 mount-path
-```
+~~~
