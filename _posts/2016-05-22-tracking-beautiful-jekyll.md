@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Remaining up-to-date with the original Beautiful Jekyll project
-subtite: Tracking a remote branch in git
+subtitle: Tracking a remote branch in git
 ---
 
 To keep my markdown knowledge updated, I decided to start posting today
@@ -16,25 +16,30 @@ beautiful-jekyll repository hoping that would fix the issue.
 And it did! So here goes a lesson
 for myself in git. I assume you have a local clone of your repository.
 For me, I ran  
-~~~
+```
 git clone https://github.com/NahsiN/nahsin.github.io ~/nahsin.github.io
-~~~
+```
 Now we add the beautiful-jekyll repository as a remote branch named
-jekyll_remote
+jekyll_remote.
+
 ~~~
 git remote add jekyll_remote https://github.com/daattali/beautiful-jekyll
 ~~~
+
 Next we create and then checkout a new local branch called jekyll_local.
+
 ~~~
 git branch jekyll_local
 git checkout jekyll_local
 ~~~
+
 Now that we are on the jekyll_local branch which you verify with
 ```
 git status
 ```
 we fetch the changes from jekyll_remote branch onto our local branch. I guess
 one can call it as 'tracking' the remote branch.
+
 ~~~
 git fetch jekyll_remote
 ~~~
@@ -43,19 +48,22 @@ Now we have a local copy of the [beautiful-jekyll](https://github.com/daattali/b
 repository and all it's commits.
 Next we are going to checkout our master branch and attempt to merge the changes from
 jekyll_local into master.
+
 ~~~
 git checkout master
 git merge jekyll_local
 ~~~
+
 Chances are you are going to have some merge conflicts that git cannot auto-resolve.
 To manually resolve conflicts,
 please see section [2.3 from the Pro Git book](https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging).
 After the conficts are resolved and a merge commit created, you can optionally
 delete the branch you just created
-~~~
+```
 git branch -d jekyll_local
-~~~
+```
 and then push the contents onto github so your site can be rebuilt
+
 ~~~
 git push origin master
 ~~~
